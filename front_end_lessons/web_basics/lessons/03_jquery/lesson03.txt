@@ -1,0 +1,7 @@
+Part 3: JQuery
+- Goal: Replace JavaScript with JQuery - Much easier way to navigate the DOM and handle events
+- Intro to JQuery, look at some of the code, and add the reference
+- Replace what we can with JQuery
+- Learn about promises
+- No changes to HTML, other than adding the reference
+

@@ -1,0 +1,43 @@
+﻿@model InventoryItem
+
+@{
+    var aspAction = "Create";
+    var buttonText = "Add Item";
+    var title = "New Item";
+
+    if (ViewBag.IsEditing == true) {
+        aspAction = "Update";
+        buttonText = "Update Item";
+        title = "Update Item";
+    }
+}
+
+<div>
+    <h3 style="display:inline">@title</h3>
+    <a class="btn btn-primary" asp-action="Index" style="float:right">Back</a>
+</div>
+<hr/>
+<form asp-action="@aspAction">
+    <input type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input type="text" class="form-control" asp-for="Name"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input type="text" class="form-control" asp-for="Description"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input type="text" class="form-control" asp-for="Price"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DaysToSell">Days to Sell</label>
+        <input type="text" class="form-control" asp-for="DaysToSell"/>
+    </div>
+
+    <button type="submit" class="btn btn-success">@buttonText</button>
+</form>

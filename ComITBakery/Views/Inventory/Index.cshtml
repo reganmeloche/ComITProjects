@@ -1,0 +1,43 @@
+﻿@model List<InventoryItem> 
+
+<h3>Inventory</h3>
+<hr/>
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                var batches = item.Batches.Where(x => x.IsDeleted == false);
+                var quantityLinq = batches.Sum(x => x.RemainingQuantity);
+
+                var quantity = 0;
+                foreach (var batch in batches) {
+                    quantity += batch.RemainingQuantity;
+                }
+
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td>@quantity</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+            }
+        
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <a asp-controller="Inventory" asp-action="Create">Create new Item</a>
+</div>

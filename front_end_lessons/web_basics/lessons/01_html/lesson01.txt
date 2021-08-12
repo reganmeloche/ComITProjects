@@ -1,0 +1,6 @@
+Part 1: HTML
+- Goal: Make a simple HTML site for a todo list
+- Learn the basic tags: body, head, span, div, p, h1-6, img, a, ...
+- Build a table that lists some sample todo items
+- Build a form for entering a new todo item
+- Navigate between the two pages using the <a> tag

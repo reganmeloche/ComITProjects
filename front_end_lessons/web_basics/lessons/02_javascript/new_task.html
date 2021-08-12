@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List - New Task</title>
+        <script src="./myScript.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h3>New Task</h3>
+        </div>
+        <hr/>
+        <div>
+            <form id="new_task_form" onsubmit="createTask()">
+                <label for="task">Task:</label>
+                <br/>
+                <input type="text" id="task_name" name="task">
+                <br/>
+                <label for="is_complete">Completed:</label>
+                <br/>
+                <select id="task_complete" name="is_complete">
+                    <option value="false" selected>False</option>
+                    <option value="true">True</option>
+                </select>
+                <br/><br/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <hr/>
+        <div>
+            <a href="./index.html">All Tasks</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+Finishing tests
+- finished all tests
+- added DI with the overdueChecker
+
+first commit
+- Basic functionality with a few of the tests
+- The failing test is due to the Overdue Renewal. We want to test the case where a renewal fails due to the book being Overdue
+-- motivates using interfaces

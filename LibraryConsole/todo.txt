@@ -1,0 +1,101 @@
+Todo
+- Finish up the main functionality
+- make a simple script for program.cs
+- write tests and make a sln
+
+Next steps:
+- get favourite books
+- store in db using EF
+
+Notes:
+- Maybe the fines is a bit too advanced for now. Can be a bonus
+
+- Person class is a good one to show getters and setters and encapsulation: FullName and Age...
+
+- LibraryBook: Composition vs inheritanve
+-- Inheritance: Can just inherit from a book
+-- Composition: Gets a library book property
+-- Leaning towards Composition. It feels a little bit counterintuitive, but my reasoning is that one book can 
+    be part of multiple library books. Suppose you had multiple copies of a book. That would mean that they can 
+    both share the same book as their book property. 
+-- Also, suppose we add some changes to the Book. Then everything changes in library book.
+    Composition keeps them loosely coupled so Library Book doesn't completely depend on it
+-- It makes a bit more sense if you don't think of the libaryBook as a physical object 
+-- Inheritance is often used to enhance the behaviour of the base class. But in this case, these are two very
+    different pieces.
+
+- Dont build constructors until we need them
+
+- private set on LibraryBook.IsCheckedOut. Understand the difference between setters and private...
+-- private set is a pretty useful pattern
+
+- Inheritance: Person -> Patron/Author - very good examples here
+-- ToString function is a good example: override if we want
+-- Cosntructors...
+
+- Order of doing things:
+-- build some main functionality
+-- build a program to play with it
+-- build the more robust program
+-- put the program into a class
+-- write some tests
+--- * FakeItEasy and xUnit - nice intro to nuget
+-- Still have a program playground that lets us interact with everything
+--- Essentially an integration test
+---* Basically just go back and forth between testing and coding
+
+
+When we are ready to break things up:
+- Source: https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+- Make a new classlib: dotnet new classlib -o LibraryLogic
+- Move all classes into LibraryLogic folder. Rename namespaces
+- create a new solution: dotnet new sln
+- add the sln ref: dotnet sln add ./LibraryLogic/LibraryLogic.csproj
+- add the test project: dotnet new xunit -o PrimeService.Tests
+- add the sln ref: dotnet sln add ./LibraryLogic.Tests/LibraryLogic.Tests.csproj
+- add a reference to the LibraryLogic from the tests
+-- dotnet add ./LibraryLogic.Tests/LibraryLogic.Tests.csproj reference ./LibraryLogic/LibraryLogic.csproj
+- Now make sure we also have a console project for us to play with 
+-- add to sln and add ref to LibraryLogic
+
+- 3 projects: one for the class, one for the tests, one for the program
+
+- one issue: We still may be able to break this
+-- for example, we have public access to LibraryBook.Checkout. 
+    But maybe that should only be possible through the Patron...
+    How do we solve this? Internal?
+
+-- Another one: How about immutability
+-- When I renew a loan, should I just return a new one, instead of modifying?
+-- should look into pros and cons of each...
+
+
+Tests
+Patron:
+- Patron checks out a book
+-- success
+-- fail - max loans
+
+- Renew a book via patron 
+-- success 
+-- fail: does not have book out 
+
+- return a book 
+-- success
+-- fail: doesnt have book out 
+
+Loan:
+- Renew a book via loan
+-- success
+-- fail: renewed too many times 
+-- fail: is overdue ***
+*** This is an interesting one. And it's where things get a bit tricky.
+    We dont want to expose anything for the sake of testing
+    We could inject some sort of datetime provider
+    Something to worry about later
+
+Library Book:
+- Checkout library book 
+-- success
+-- already checked out 
+

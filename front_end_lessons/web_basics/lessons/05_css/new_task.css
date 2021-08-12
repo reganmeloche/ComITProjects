@@ -1,0 +1,45 @@
+#form_title {
+    font-size: 22px;
+    padding: 10px;
+}
+
+#new_task_form_holder {
+    text-align: center;
+}
+
+#new_task_form {
+    width:40%;
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+input, select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    background-color: lightblue;
+}
+
+label {
+    font-weight: bold;
+}
+
+#form_submit {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    float:right;
+    background-color: green;
+}

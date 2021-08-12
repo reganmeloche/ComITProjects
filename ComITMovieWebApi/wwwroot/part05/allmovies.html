@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Movies</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <link rel="stylesheet" href="common.css">
+    </head>
+
+    <body onload="loadMovies();">
+        <div>
+            <h1>My Movie Application</h1>
+        </div>
+        <hr/>
+        <div>
+            <h3 class="header-text">All Movies</h3>
+        </div>
+        <div>
+            <div>
+                <table width="50%" id="movie-table">
+                    <tr>
+                        <th>Movie</th>
+                        <th>Director</th>
+                        <th>Year</th>
+                    </tr>
+                    <!-- DATA GETS APPENDED HERE! -->
+                </table>
+
+            </div>
+            <div class="nav-container">
+                <a href="newmovie.html">New Movie</a>
+            </div>
+        </div>
+        
+        <hr/>
+        <div>
+            <p>Copyright 2020</p>
+        </div>   
+    </body>
+</html>
+
+<script>
+    function loadMovies() {
+        console.log("Loading movies!");
+        
+        $.get('../Movie', function(movies) {
+            var table = $("#movie-table");
+            console.log(movies);
+
+            for (var i = 0; i < movies.length; i++) {  
+                var movie = movies[i];
+                var tableRow = buildTableRow(movie); 
+                table.append(tableRow);    
+            }
+        });
+
+    }
+
+    function buildTableRow(movie) {
+        var nextRow = document.createElement('tr');
+
+        var cell1 = document.createElement('td');
+        var text1 = document.createTextNode(movie.title);
+        cell1.append(text1);
+        nextRow.append(cell1);
+
+        var cell2 = document.createElement('td');
+        var text2 = document.createTextNode(movie.director);
+        cell2.append(text2);
+        nextRow.append(cell2);
+
+        var cell3 = document.createElement('td');
+        var text3 = document.createTextNode(movie.year);
+        cell3.append(text3);
+        nextRow.append(cell3);
+
+        return nextRow;
+    }
+
+</script>
+
+<style>
+
+table {
+    margin: 0 auto;
+    width:60%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid grey;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+th {
+    height: 40px;
+    border: 1px solid grey;
+    background-color:lightsteelblue;
+}
+
+</style>

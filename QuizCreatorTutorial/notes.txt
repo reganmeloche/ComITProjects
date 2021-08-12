@@ -1,0 +1,79 @@
+Part 1:
+- Take user input, count the words. Output results
+- This is just to introduce the basics and get something working
+- Basic console app. Keep it all in the main code block
+- Bonus challenge: Count the number of non-space characters
+
+
+Part 2:
+- Count number of instances of each word
+- Print as follows:
+word (3)
+another (1)
+is (8)
+the (4)
+
+- Move the main algorithm into a new function
+- Create a more sophisticated result object. 
+- Will need a function to print the results as well
+- Result will be a dictionary
+- Cleans up the Main function - which is a good goal
+- Bonus challenge: strip the punctuation
+
+
+Part 3:
+- Read input from and write to a new file
+- For output, create an interface that can do either a file or console
+- Intro to using dependency injection as well
+- Separating out into different files. Make a separate printer folder with three files
+-- IPrintResults 
+-- ConsolePrinter - we move our current implementation here
+-- FilePrinter - new implementation
+- Bonus challenge: Implement an interface for the input - console or file
+
+
+Part 4: 
+- Clean it up and separate everything
+- Split processing into a separate class called wordCounter
+- Make the runner class and use DI
+- Main should just do DI and call the Run
+- Bonus challenge: Come up with some other implementation of ICountWords
+
+
+Part 5:
+- Set it up so we can build a fill-in-the-blank quiz from some input text
+- Assign a simple scoring system to the words and generate a fill in the blank quiz
+- Add in a new QuizResult object
+- Add in QuizBuilder. Program calls run, run calls read, buildQuiz, and write
+- A bit more re-organization and DI. Clean up folder structure a bit
+- Add a Helper function for Stripping punctuation
+- Bonus challenge: Come up with your own twist on scoring the words (make it smarter)
+
+
+Part 6: 
+- Adding in an Api call: Oxford API dictionary - check out the docs. Talk about REST. 
+- Two new classes: IGetWordInfo, ILookupAWord
+- Model: CoreWord for Word Lookup
+- Bonus Challenge: 
+-- Restrict dictionary call to some common words (and, the, etc...) - save some calls
+-- This could be a good example of wrapping one implementation in a different implementation
+-- Or could make a preset dictionary with a bunch of known values (and, the, of...)
+
+
+Part 7:
+- Polishing and cleaning - done
+- Adding tests: WordCounter and WordInfoGetter - got a start; using FakeItEasy
+- Add randomness into the scoring - done - added an options object
+- Use values from an app config - done 
+- Create an executable and run it - done
+
+- adding tests: https://docs.microsoft.com/en-us/dotnet/core/tutorials/testing-with-cli
+- adding tests issue fix: https://andrewlock.net/fixing-the-error-program-has-more-than-one-entry-point-defined-for-console-apps-containing-xunit-tests/
+
+
+More ideas:
+- add in a user search for wikipedia and fetch from there.
+- Add a list of common words to ignore
+- Add logging - can use console or another file
+- Use Microsoft Dependency Injection
+- Deploy it to a job in azure

@@ -1,0 +1,14 @@
+Part 5: CSS
+- Goal: Make the web application look nice
+- Learn basics of css
+- Start by adding it inline, then move to style tag in the page, then move to separate file
+- Make everything look nice and organized. Create some common styling for both pages
+- Center the title, organize the table, make the form nicer to use
+- Make all the buttons and inputs nicer 
+- Common styling for the nav button
+
+Notes:
+- The functionality is still the same even if we remove the css.
+- We've now separated 3 pieces: The styling, the functionality, and the layout
+- forms are quite difficult to get right
+- Major problem: Scaling for mobile and other screen sizes

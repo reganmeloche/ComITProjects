@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List - New Task</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="./myScript.js"></script>
+        <link rel="stylesheet" href="new_task.css">
+        <link rel="stylesheet" href="common.css">
+    </head>
+
+    <body>
+        <div class="header_text">Todo List</div>
+        <hr/>
+        <div id="new_task_form_holder">
+            <div id=form_title>New Task</div>
+            <form id="new_task_form" action="./index.html" method="post">
+                <label for="task">Task:</label>
+                <br/>
+                <input id="task_name" name="task">
+                <br/><br/>
+                <label for="is_complete">Completed:</label>
+                <br/>
+                <select id="task_complete" name="is_complete">
+                    <option value="false" selected>False</option>
+                    <option value="true">True</option>
+                </select>
+                <br/>
+                <br/>
+                <button id="form_submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="nav_container">
+            <a href="./index.html">All Tasks</a>
+        </div>
+    </body>
+</html>

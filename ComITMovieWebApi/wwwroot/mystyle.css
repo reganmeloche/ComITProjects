@@ -1,0 +1,17 @@
+.page-title {
+    color:midnightblue;
+    text-align:center;
+    font-size:30px
+}
+
+.nav-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.nav-container > a {
+    background-color: lightsteelblue;
+    color:black;
+    border-radius: 5px;
+    padding: 10px;
+}

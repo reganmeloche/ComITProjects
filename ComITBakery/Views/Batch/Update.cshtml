@@ -1,0 +1,26 @@
+﻿@model Batch
+
+<div>
+    <h3 style="display:inline">Update Batch</h3>
+    <a class="btn btn-primary" asp-controller="Inventory" asp-action="Details" asp-route-id="@Model.InventoryItemId" style="float:right">Back</a>
+</div>
+<hr/>
+<form asp-action="Update">
+    <input type="hidden" asp-for="InventoryItemId"/>
+    <input type="hidden" asp-for="Id"/>
+    <input type="hidden" asp-for="InitialQuantity"/>
+    <input type="hidden" asp-for="ProductionDate"/>
+
+    <div class="form-group">
+        <label asp-for="RemainingQuantity">Remaining Quantity</label>
+        <input type="text" class="form-control" asp-for="RemainingQuantity"/>
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+<hr/>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="InventoryItemId"/>
+    <input type="hidden" asp-for="Id"/>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

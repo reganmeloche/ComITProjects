@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="./myScript.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Todo List</a>
+                  </div>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col-sm-7">
+                    <div id="table_holder">
+                        <table id="task_table" class="table-striped table table-bordered">
+                            <tr >
+                                <th>Task</th>
+                                <th>Status</th>
+                                <th>Complete</th>
+                                <th>Delete</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div id="new_task_form_holder" class="well">
+                        <form id="new_task_form">
+                            <div class="form-group">
+                                <label for="task_name">Task name:</label>
+                                <input type="text" id="task_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="task_complete">Completed:</label>
+                                <select id="task_complete" class="form-control">
+                                    <option value="false" selected>False</option>
+                                    <option value="true">True</option>
+                                </select>
+                            </div>
+                            <button type="submit" id="form_submit" class="btn btn-default">Add Task</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    #new_task_form_holder {
+        background-color: lightyellow;
+    }
+
+    .navbar {
+        background-color: lightsteelblue;
+    }
+</style>

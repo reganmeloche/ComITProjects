@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Movie</title>
+        <link rel="stylesheet" href="mystyle.css"/>
+    </head>
+
+    <body>
+        <h1>Movie Application</h1>
+        <h3 class="page-title">New Movie</h3>
+        <div id="movie-form-holder">
+            <form>
+                <label for="movie-title">Title: </label>
+                <input name="movie-title" type="text"/>
+                <br/><br/>
+    
+                <label for="movie-director">Director: </label>
+                <input name="movie-director" type="text"/>
+                <br/><br/>
+    
+                <label for="movie-year">Year: </label>
+                <input name="movie-year" type="number"/>
+                <br/><br/>
+                <div>
+                    <button type="submit">Create new Movie</button>
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="nav-container">
+            <a href="allmovies.html">All Movies</a>
+        </div>
+
+        <hr/>
+        <p>Copyright 2020</p>
+
+    </body>
+</html>
+
+<style>
+form {
+    width:40%;
+    background-color: lightyellow;
+    border: 1px solid grey;
+    border-radius:4px;
+    padding: 20px;
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    border-radius:4px;
+    border: 1px solid lightgrey;
+    margin-top: 5px;
+
+}
+
+input:focus {
+    background-color: lightskyblue;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    background-color: green;
+    color: white;
+    padding: 8px;
+    cursor:pointer;
+    margin: 0 auto;
+    display: block
+}
+
+button:focus {
+    background-color: darkgreen;
+}
+
+
+
+
+</style>

@@ -1,0 +1,21 @@
+Goal: 
+- Introduce the fundamental front-end web technologies, building up to the .NET MVC framework. 
+- By this point we will have learned how to build a working RESTful API that we can query from something like Postman. 
+- A front-end web application gives our users a nice usable interface so that they don’t need to make calls to Postman anytime they want to do anything.
+
+Prerequisites: 
+- Understanding of: Web architecture, http, REST, coding basics
+- We will also have a simple Todo REST api set up and running locally
+
+Summary
+- We have a fully working website. Walk through and summarize all the pieces.
+- Talk about the next steps we would take to actually deploy this and get it online
+- Code organization: Separating logic, style, and layout
+- What is missing? Validation, authentication,...
+- Drawbacks: lack of type-safety due to using javascript, somewhat tedious, ...
+
+Moving to MVC
+- Discuss the components of MVC and compare to our first approach
+- Learn about .NET implementation of MVC
+- Build a MVC web application using tools such as scaffolding
+- Compare the final result of the MVC site to our first approach

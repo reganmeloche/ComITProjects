@@ -1,0 +1,13 @@
+Part 6: Bootstrap
+- Goal: Replace our styling with Bootstrap
+- Include cdns, add meta tag in head
+- Add container, rows, and columns. Learn about the grid system
+- Move the table and form to the same page. Easier to use
+- Format the table - big win for a couple classes (also table-striped, table-bordered, ...)
+- Add classes to the form
+- Buttons: success and danger (need to go into the ajax page to edit)
+- Navbar
+
+Notes:
+- Goal isn't to do a deep dive into bootstrap. Just want to show its power
+- Downside? html page gets a bit more complicated. Lots of divs

@@ -1,0 +1,19 @@
+
+.header-text {
+    text-align: center;
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.nav-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.nav-container > a {
+    padding:10px;
+    background-color: lightsteelblue;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+}

@@ -1,0 +1,10 @@
+Part 2: JavaScript
+- Goal: Use JavaScript to interact with HTML
+- Code refresher: variables, functions, etc.
+- Intro and background on JavaScript. Compare with C#
+- Intro to the DOM - add ids and classes to HTML elements
+- Hook up a simple button, and fill in some info
+- Populate the table using a mock list of tasks
+- Add buttons that just output the action to the console
+- Add a form that just outputs the new todo item to the console
+- Important concept: We've started to separate the functionality from the layout

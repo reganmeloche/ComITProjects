@@ -1,0 +1,33 @@
+#task_table {
+    margin: 0 auto;
+    width:60%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid grey;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+th {
+    height:40px;
+    border: 1px solid grey;
+    background-color:lightsteelblue;
+}
+
+button {
+    border-radius: 5px;
+    padding:5px;
+    border:1px solid lightgray;
+}
+
+.delete_button {
+    background-color:tomato
+}
+
+.complete_button {
+    background-color: greenyellow;
+}

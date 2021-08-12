@@ -1,0 +1,11 @@
+Part 4: Ajax
+- Goal: Add in the Ajax calls to make the app functional
+- More info about client-server architecture (cors)
+- More on promises and binding
+
+Notes:
+- Need to set up CORS on API: https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-3.1
+- Need to bind handlers AFTER ajax call
+- GET and DELETE are straightforward
+- Add a new PUT call to the API /{id}/complete
+- Need to add some more info for the POST (ContentType)

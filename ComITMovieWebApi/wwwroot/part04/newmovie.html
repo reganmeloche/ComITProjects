@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Movie</title>
+        <link rel="stylesheet" href="common.css">
+    </head>
+
+    <body>
+        <div>
+            <h1>My Movie Application</h1>
+        </div>
+        <hr/>    
+        <div>
+            <h3 class="header-text">New Movie</h3>
+        </div>
+
+        <div id="form-holder">
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" name="title">
+                <br/><br/>
+
+                <label for="director">Director:</label>
+                <input type="text" name="director">
+                <br/><br/>
+
+                <label for="year">Year:</label>
+                <input type="number" name="year">
+                <br/><br/>
+
+                <button type="submit">Submit</button>
+                <br/><br/>
+            </form>
+            <div class="nav-container">
+                <a href="allmovies.html">All Movies</a>
+            </div>
+        </div>
+        <hr/>
+        <div>
+            <p>Copyright 2020</p>
+        </div>  
+    </body>
+</html>
+
+<style>
+
+#form-holder {
+    text-align: center;
+}
+
+form {
+    width:40%;
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+input {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+    background-color: green;
+}
+
+</style>
