@@ -1,0 +1,36 @@
+@model List<ComitLibrary.Models.Book>
+
+<h2>List of Books</h2>
+<div>
+    <table id="books-table" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Checked Out</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        @for (int i = 0; i < Model.Count; i++) {
+            string rowClass = "";
+            if (Model[i].IsCheckedOut) {
+                rowClass = "book-checked-out"; 
+            }
+            <tr class="@rowClass">
+                <td>@Model[i].Title</td>
+                <td>@Model[i].Author</td>
+                <td>@Model[i].IsCheckedOut</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@Model[i].Id">View Book</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        
+    </table>
+    <div>
+        <a asp-action="Form">New Book</a>
+    </div>
+
+</div>
