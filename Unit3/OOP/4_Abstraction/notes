@@ -1,0 +1,10 @@
+To show the real benefit of interfaces, I should use the QuizBuilder example. Or maybe just the WordCounter
+- Take in some text
+- Count the words
+- Print out a summary
+
+- use a list first to see the result
+- then justify the dictionary
+- that way we can do another interface!
+
+- they re-use the punctuation stripper. Should probably inject that  in
